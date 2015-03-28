@@ -29,7 +29,6 @@ JargonBuster.prototype.findTextBlocks = function() {
 }
 
 JargonBuster.prototype.findJargon = function($tags, dict) {
-    console.log(dict);
     for (var j = 0; j < dict.length; j++) {
         var term = dict[j].term;
         var withTag = '<span class="jargon-buster-term">' + term + '</span>';
@@ -47,3 +46,10 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
         // - only show once
     }
 }
+
+window.onload = function(){
+  alert('hi');
+  var buster = new JargonBuster({
+    'spreadsheet_key': '1ghlHloe91EWGK4khcl-VJ_JhltzOMsxrNobDZVcX8zU'
+  });
+};
