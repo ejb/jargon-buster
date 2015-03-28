@@ -12,9 +12,10 @@
     "dictionary.json"
   ],
   "content_scripts": [{
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "js": [
         "scripts/jquery.min.js",
+        "scripts/tabletop.min.js",
         "scripts/jargon-buster.js",
         "scripts/jargon-buster-extension.js"
       ],
