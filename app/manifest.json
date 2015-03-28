@@ -8,9 +8,13 @@
     "128": "images/icon-128.png"
   },
   "default_locale": "en",
+  "web_accessible_resources": [
+    "dictionary.json"
+  ],
   "content_scripts": [{
       "matches": ["http://*/*", "https://*/*"],
       "js": [
+        "scripts/jquery.min.js",
         "scripts/jargon-buster.js",
         "scripts/jargon-buster-extension.js"
       ],
