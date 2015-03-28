@@ -1,6 +1,6 @@
 # WSJ Jargon Buster
 
-A glossary of technical (financial?) terms that follows you around the web.
+A glossary of technical terms that follows you around the web.
 
 A hack for Build The News March 2015.
 
