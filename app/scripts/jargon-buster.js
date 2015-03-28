@@ -23,15 +23,22 @@ JargonBuster.prototype.findJargon = function($tags, dict){
     for (var j = 0; j < dict.length; j++) {
       var term = dict[j].term;
       // console.log( tags[i], tags[i].innerText);
-      var withTag = '<span class="jargon-buster-term" style="color: red;">'+term+'</span>';
+      var withTag = '<span class="jargon-buster-term">'+term+'</span>';
+      
+      var punc = [' ',',','.','\'','"','“','‘','’','”','-','—',';',':','(',')'];
       
       $tags.html(function () {
-          return $(this).html().replace(term, withTag); 
+        var html = $(this).html();
+        var search = new RegExp( '([\.,-\/#!$%\^&\*;:{}=\-_`~() ])('+term+')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi' );
+        return html.replace(search, "$1"+withTag+"$3"); 
       });
-            
+                  
       // TODO:
       // - If link, ignore
+      // - Upper or lowercase
       // - Retain case
+      // - punctation?
+      // - only show once
     }
 }
 
