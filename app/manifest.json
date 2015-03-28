@@ -8,13 +8,14 @@
     "128": "images/icon-128.png"
   },
   "default_locale": "en",
-  "content_scripts": {
-    "js": [
-      "scripts/jargon-buster.js",
-      "scripts/jargon-buster-extension.js"
-    ],
-    "css": [
-      "css/jargon-buster.js"
-    ]
-  }
+  "content_scripts": [{
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "scripts/jargon-buster.js",
+        "scripts/jargon-buster-extension.js"
+      ],
+      "css": [
+        "css/jargon-buster.css"
+      ]
+    }]
 }
