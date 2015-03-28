@@ -19,14 +19,9 @@ JargonBuster.prototype.findTextBlocks = function(){
 }
 
 JargonBuster.prototype.findJargon = function($tags, dict){
-  // console.log(tags);
     for (var j = 0; j < dict.length; j++) {
       var term = dict[j].term;
-      // console.log( tags[i], tags[i].innerText);
       var withTag = '<span class="jargon-buster-term">'+term+'</span>';
-      
-      var punc = [' ',',','.','\'','"','“','‘','’','”','-','—',';',':','(',')'];
-      
       $tags.html(function () {
         var html = $(this).html();
         var search = new RegExp( '([\.,-\/#!$%\^&\*;:{}=\-_`~() ])('+term+')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi' );
