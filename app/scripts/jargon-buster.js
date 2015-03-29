@@ -31,15 +31,17 @@ JargonBuster.prototype.findTextBlocks = function() {
 
 JargonBuster.prototype.findJargon = function($tags, dict) {
     for (var j = 0; j < dict.length; j++) {
-        var term = dict[j].term;
-        console.log(dict[j])
-        var def = dict[j].definition || dict[j].defintion;
+      var terms = dict[j].term.split(',');
+      var def = dict[j].definition || dict[j].defintion;
+      $.each(terms, function(i,term){
         var withTag = '<span class="jargon-buster-term" data-definition="'+def+'">' + term + '</span>';
         $tags.html(function() {
             var html = $(this).html();
             var search = new RegExp('([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi');
             return html.replace(search, "$1" + withTag + "$3");
         });
+      })
+      
 
         // TODO:
         // - If link, ignore
