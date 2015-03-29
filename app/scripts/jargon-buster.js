@@ -35,12 +35,13 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
       var terms = dict[j].term.split(',');
       var def = dict[j].definition || dict[j].defintion;
       $.each(terms, function(i,term){
-        var withTag = '<span class="jargon-buster-term" data-definition="'+def+'">' + term + '</span>';
+        var tagLeft = '<span class="jargon-buster-term" data-definition="'+def+'">';
+        var tagRight = '</span>';
         $tags.html(function() {
             var html = $(this).html();
             var search = new RegExp('([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi');
             if (usedTerms[j] !== true) {
-              html = html.replace(search, "$1" + withTag + "$3");
+              html = html.replace(search, "$1" + tagLeft + "$2" + tagRight + "$3");
             }
             if (html.indexOf(term) > -1) {
               usedTerms[j] = true;
@@ -59,6 +60,7 @@ JargonBuster.prototype.setupClicks = function(){
   $('.jargon-buster-term').click(function(){
     var def = $(this).attr('data-definition');
     var term = $(this).text();
+    $('.jargon-buster-definition:not([data-term="'+term+'"])').slideUp();
     if ($('.jargon-buster-definition[data-term="'+term+'"]').length === 0) {
       $(this).parent('p').after(
         '<p class="jargon-buster-definition" data-term="'+term+'">'+
