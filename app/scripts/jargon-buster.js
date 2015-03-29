@@ -48,12 +48,9 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
             return html;
         });
       })
-      
 
-        // TODO:
-        // - If link, ignore
-        // - Upper or lowercase
-        // - Retain case
+      // TODO:
+      // - If link, ignore
     }
 }
 
