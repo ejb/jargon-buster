@@ -8,10 +8,10 @@
 
 .jargon-buster-definition {
     color: #555;
-    font-size: 1.4em;
-    line-height: 1.8em;
+    font-size: 14px;
+    line-height: 22px;
     margin-top: 0;
-    padding: 5px 8px;
+    padding: 8px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     display: none;
