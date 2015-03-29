@@ -6,6 +6,7 @@ function JargonBuster(args) {
     this.getDictionary(function(dict) {
         var tags = that.findTextBlocks();
         that.findJargon(tags, dict);
+        that.setupClicks();
     });
 }
 
@@ -31,7 +32,9 @@ JargonBuster.prototype.findTextBlocks = function() {
 JargonBuster.prototype.findJargon = function($tags, dict) {
     for (var j = 0; j < dict.length; j++) {
         var term = dict[j].term;
-        var withTag = '<span class="jargon-buster-term">' + term + '</span>';
+        console.log(dict[j])
+        var def = dict[j].definition || dict[j].defintion;
+        var withTag = '<span class="jargon-buster-term" data-definition="'+def+'">' + term + '</span>';
         $tags.html(function() {
             var html = $(this).html();
             var search = new RegExp('([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi');
@@ -42,7 +45,27 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
         // - If link, ignore
         // - Upper or lowercase
         // - Retain case
-        // - punctation?
         // - only show once
     }
 }
+
+
+JargonBuster.prototype.setupClicks = function(){
+  $('.jargon-buster-term').click(function(){
+    var def = $(this).attr('data-definition');
+    var term = $(this).text();
+    if ($('.jargon-buster-definition[data-term="'+term+'"]').length === 0) {
+      $(this).parent('p').after(
+        '<p class="jargon-buster-definition" data-term="'+term+'">'+
+        '<strong>'+term+': </strong>'+def+
+        '<span class="jargon-close"> (close)</span>'+
+        '</p>'
+      );
+    }
+    $('.jargon-buster-definition[data-term="'+term+'"]').slideToggle();
+    $('.jargon-close').click(function(){
+      $('.jargon-buster-definition[data-term="'+term+'"]').slideUp();
+    });
+  });
+}
+
