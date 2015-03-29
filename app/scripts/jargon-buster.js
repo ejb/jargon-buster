@@ -30,16 +30,16 @@ JargonBuster.prototype.findTextBlocks = function() {
 }
 
 JargonBuster.prototype.findJargon = function($tags, dict) {
-  var usedTerms = [];
+    var usedTerms = [];
     for (var j = 0; j < dict.length; j++) {
-      var terms = dict[j].term.split(',');
-      var def = dict[j].definition || dict[j].defintion;
+      var terms = dict[j].term.split(','),
+          def = dict[j].definition || dict[j].defintion;
       $.each(terms, function(i,term){
-        var tagLeft = '<span class="jargon-buster-term" data-definition="'+def+'" data-def-name="'+terms[0]+'">';
-        var tagRight = '</span>';
+        var tagLeft = '<span class="jargon-buster-term" data-definition="'+def+'"  data-def-name="'+terms[0]+'">',
+            tagRight = '</span>';
         $tags.html(function() {
-            var html = $(this).html();
-            var search = new RegExp('([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi');
+            var html = $(this).html(),
+                search = new RegExp('([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi');
             if (usedTerms[j] !== true) {
               html = html.replace(search, "$1" + tagLeft + "$2" + tagRight + "$3");
             }
@@ -61,7 +61,10 @@ JargonBuster.prototype.setupClicks = function(){
     var def = $(this).attr('data-definition');
     var term = $(this).text();
     var termName = $(this).attr('data-def-name');
-    $('.jargon-buster-definition:not([data-term="'+term+'"])').slideUp();
+    var def = $(this).attr('data-definition'),
+        term = $(this).text(),
+        termName = $(this).attr('data-def-name');
+        $('.jargon-buster-definition:not([data-term="'+term+'"])').slideUp();
     if ($('.jargon-buster-definition[data-term="'+term+'"]').length === 0) {
       $(this).parent('p').after(
         '<p class="jargon-buster-definition" data-term="'+term+'">'+
@@ -76,4 +79,3 @@ JargonBuster.prototype.setupClicks = function(){
     });
   });
 }
-

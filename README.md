@@ -1,6 +1,10 @@
 # WSJ Jargon Buster
 
-A glossary of technical terms that follows you around the web. A hack for Build The News March 2015.
+A glossary of technical terms that follows you around the web. Made in a weekend by WSJ for Build The News, March 2015.
+
+Here's how it looks:
+
+> ![Jargon Buster screenshot](http://i.imgur.com/BVRCd1hl.png)
 
 ## How to install Chrome plugin
 
