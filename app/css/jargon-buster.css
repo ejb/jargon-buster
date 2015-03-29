@@ -5,6 +5,9 @@
     border-radius: 2px;
     cursor: pointer;
 }
+.jargon-buster-term:hover {
+  background-color: rgb(219, 229, 242);
+}
 
 .jargon-buster-definition {
     color: #555;
@@ -25,3 +28,6 @@
   padding: 2px;
 }
 
+.jargon-close:hover {
+  background-color: rgb(219, 229, 242);
+}
