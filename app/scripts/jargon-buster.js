@@ -39,7 +39,7 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
             tagRight = '</span>';
         $tags.html(function() {
             var html = $(this).html(),
-                search = new RegExp('([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi');
+                search = new RegExp('(?!<a[^>]*>)([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(?![^<]*</a>)', 'gi');
             if (usedTerms[j] !== true) {
               html = html.replace(search, "$1" + tagLeft + "$2" + tagRight + "$3");
             }
