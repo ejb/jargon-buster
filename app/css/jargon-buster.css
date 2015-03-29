@@ -16,3 +16,11 @@
     border-bottom: 1px solid #000;
     display: none;
 }
+
+.jargon-close {
+  background-color: #C9D2DE;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 90%;
+  padding: 2px;
+}

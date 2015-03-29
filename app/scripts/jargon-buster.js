@@ -58,7 +58,7 @@ JargonBuster.prototype.setupClicks = function(){
       $(this).parent('p').after(
         '<p class="jargon-buster-definition" data-term="'+term+'">'+
         '<strong>'+term+': </strong>'+def+
-        '<span class="jargon-close"> (close)</span>'+
+        '<span class="jargon-close">close</span>'+
         '</p>'
       );
     }
