@@ -30,6 +30,7 @@ JargonBuster.prototype.findTextBlocks = function() {
 }
 
 JargonBuster.prototype.findJargon = function($tags, dict) {
+  var usedTerms = [];
     for (var j = 0; j < dict.length; j++) {
       var terms = dict[j].term.split(',');
       var def = dict[j].definition || dict[j].defintion;
@@ -38,7 +39,13 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
         $tags.html(function() {
             var html = $(this).html();
             var search = new RegExp('([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])', 'gi');
-            return html.replace(search, "$1" + withTag + "$3");
+            if (usedTerms[j] !== true) {
+              html = html.replace(search, "$1" + withTag + "$3");
+            }
+            if (html.indexOf(term) > -1) {
+              usedTerms[j] = true;
+            }
+            return html;
         });
       })
       
@@ -47,7 +54,6 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
         // - If link, ignore
         // - Upper or lowercase
         // - Retain case
-        // - only show once
     }
 }
 
