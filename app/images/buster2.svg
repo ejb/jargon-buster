@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="448.303px" height="535.188px" viewBox="0 0 448.303 535.188" enable-background="new 0 0 448.303 535.188"
+	 xml:space="preserve">
+<symbol  id="Deleted_Symbol" viewBox="-5.5 -8.5 11 17">
+	<path d="M-3.5,6.5h-1v-11h1v1h1v1h1v-1h1v-2h1v-2h2v2h-1v2h-1v2h3v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1V6.5z"/>
+	<g>
+		<polygon fill="#FFFFFF" points="5.5,-2.5 5.5,-1.5 4.5,-1.5 4.5,-0.5 3.5,-0.5 3.5,-1.5 0.5,-1.5 0.5,-3.5 1.5,-3.5 1.5,-2.5 		
+			"/>
+		<polygon fill="#FFFFFF" points="1.5,1.5 1.5,2.5 0.5,2.5 0.5,1.5 		"/>
+		<polygon fill="#FFFFFF" points="0.5,2.5 0.5,3.5 -0.5,3.5 -0.5,2.5 		"/>
+		<polygon fill="#FFFFFF" points="-1.5,4.5 -1.5,5.5 -2.5,5.5 -2.5,4.5 		"/>
+		<polygon fill="#FFFFFF" points="-2.5,5.5 -2.5,6.5 -3.5,6.5 -3.5,5.5 		"/>
+		<polygon fill="#FFFFFF" points="-4.5,6.5 -3.5,6.5 -3.5,7.5 -4.5,7.5 -4.5,8.5 -5.5,8.5 -5.5,-6.5 -4.5,-6.5 -4.5,-5.5 -3.5,-5.5 
+			-3.5,-4.5 -4.5,-4.5 		"/>
+		<polygon fill="#FFFFFF" points="-0.5,3.5 -0.5,4.5 -1.5,4.5 -1.5,3.5 		"/>
+		<polygon fill="#FFFFFF" points="-1.5,-3.5 -1.5,-5.5 -0.5,-5.5 -0.5,-3.5 		"/>
+		<polygon fill="#FFFFFF" points="-2.5,-2.5 -2.5,-3.5 -1.5,-3.5 -1.5,-2.5 		"/>
+		<polygon fill="#FFFFFF" points="-3.5,-4.5 -2.5,-4.5 -2.5,-3.5 -3.5,-3.5 		"/>
+		<polygon fill="#FFFFFF" points="3.5,-0.5 3.5,0.5 2.5,0.5 2.5,-0.5 		"/>
+		<polygon fill="#FFFFFF" points="2.5,0.5 2.5,1.5 1.5,1.5 1.5,0.5 		"/>
+		<polygon fill="#FFFFFF" points="2.5,-5.5 2.5,-3.5 1.5,-3.5 1.5,-5.5 		"/>
+		<polygon fill="#FFFFFF" points="0.5,-7.5 0.5,-8.5 3.5,-8.5 3.5,-5.5 2.5,-5.5 2.5,-7.5 		"/>
+		<polygon fill="#FFFFFF" points="-0.5,-5.5 -0.5,-7.5 0.5,-7.5 0.5,-5.5 		"/>
+	</g>
+</symbol>
+<pattern  x="-159.34" y="57.062" width="8.485" height="8.484" patternUnits="userSpaceOnUse" id="cross_hatching" viewBox="9.547 -18.03 8.485 8.484" overflow="visible">
+	<g>
+		<polygon fill="none" points="9.547,-18.03 18.032,-18.03 18.032,-9.545 9.547,-9.545 		"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="18.03" y1="-1.061" x2="26.517" y2="-9.545"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="9.546" y1="-1.061" x2="18.032" y2="-9.545"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="1.061" y1="-1.061" x2="9.547" y2="-9.545"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="18.03" y1="-9.545" x2="26.517" y2="-18.03"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="9.546" y1="-9.545" x2="18.032" y2="-18.03"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="1.061" y1="-9.545" x2="9.547" y2="-18.03"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="18.03" y1="-18.029" x2="26.517" y2="-26.514"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="9.546" y1="-18.029" x2="18.032" y2="-26.514"/>
+		<line fill="none" stroke="#231F20" stroke-width="3" x1="1.061" y1="-18.029" x2="9.547" y2="-26.514"/>
+	</g>
+</pattern>
+<g id="BACKGROUND">
+</g>
+<g id="GRAPHICS">
+	<circle fill="#A7A9AC" cx="224.151" cy="262.552" r="224.151"/>
+	<path fill="#58595B" d="M224.151,197.552c-35.894,0-65,29.117-65,65s29.106,65,65,65c35.865,0,65-29.117,65-65
+		S260.017,197.552,224.151,197.552z"/>
+	<g>
+		
+			<text transform="matrix(0.947 -0.3212 0.3212 0.947 112.2324 211.333)" fill="#CE472E" font-family="'ChronicleDispCond-Bold'" font-size="182">J</text>
+		<g>
+			
+				<text transform="matrix(0.8289 0.5594 -0.5594 0.8289 87.0493 374.5425)" fill="#CE472E" font-family="'ChronicleDispCond-Bold'" font-size="195.5002">g</text>
+		</g>
+		
+			<text transform="matrix(0.9789 -0.2042 0.2042 0.9789 194.3022 475.2847)" fill="#CE472E" font-family="'ChronicleDispCond-Bold'" font-size="195.5002">o</text>
+		<g>
+			
+				<text transform="matrix(0.7496 -0.6619 0.6619 0.7496 221.4004 183.8643)" fill="#CE472E" font-family="'ChronicleDispCond-Bold'" font-size="195.5002">a</text>
+		</g>
+		<g>
+			
+				<text transform="matrix(0.7837 0.6211 -0.6211 0.7837 262.7451 152.9746)" fill="#CE472E" font-family="'ChronicleDispCond-Bold'" font-size="148">R</text>
+		</g>
+		<g>
+			
+				<text transform="matrix(0.8572 -0.515 0.515 0.8572 307.1777 438.0249)" fill="#CE472E" font-family="'ChronicleDispCond-Bold'" font-size="195.5002">n</text>
+		</g>
+	</g>
+	<g>
+	</g>
+	<g>
+		<g>
+			<defs>
+				<circle id="SVGID_1_" cx="224.151" cy="262.552" r="224.151"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  overflow="visible"/>
+			</clipPath>
+			<rect x="-42.286" y="218.034" clip-path="url(#SVGID_2_)" fill="#F05336" width="525.175" height="83.185"/>
+		</g>
+		
+			<text transform="matrix(1 0 0 1 66.269 280.6367)" fill="#FFFFFF" font-family="'Whitney-Bold'" font-size="62.4998" letter-spacing="20">BUSTER</text>
+	</g>
+</g>
+</svg>
