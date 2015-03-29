@@ -35,7 +35,7 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
       var terms = dict[j].term.split(',');
       var def = dict[j].definition || dict[j].defintion;
       $.each(terms, function(i,term){
-        var tagLeft = '<span class="jargon-buster-term" data-definition="'+def+'">';
+        var tagLeft = '<span class="jargon-buster-term" data-definition="'+def+'" data-def-name="'+terms[0]+'">';
         var tagRight = '</span>';
         $tags.html(function() {
             var html = $(this).html();
@@ -60,11 +60,12 @@ JargonBuster.prototype.setupClicks = function(){
   $('.jargon-buster-term').click(function(){
     var def = $(this).attr('data-definition');
     var term = $(this).text();
+    var termName = $(this).attr('data-def-name');
     $('.jargon-buster-definition:not([data-term="'+term+'"])').slideUp();
     if ($('.jargon-buster-definition[data-term="'+term+'"]').length === 0) {
       $(this).parent('p').after(
         '<p class="jargon-buster-definition" data-term="'+term+'">'+
-        '<strong>'+term+': </strong>'+def+
+        '<strong>'+termName+': </strong>'+def+
         '&nbsp;<span class="jargon-close">close</span>'+
         '</p>'
       );
