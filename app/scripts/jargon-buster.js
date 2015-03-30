@@ -10,6 +10,14 @@ function JargonBuster(args) {
     });
 }
 
+function escapeRegExp(str) {
+  //http://stackoverflow.com/a/6969486
+  //"If you're going to use the function above at least link to this stack
+  //overflow post in your code's documentation so that it doesn't look like
+  //crazy hard-to-test voodoo."
+  return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+}
+
 JargonBuster.prototype.getDictionary = function(callback) {
     if ('undefined' !== typeof this.args.spreadsheet_key) {
         //Okay, we have a spreadsheet url! Do Tabletop.
@@ -36,7 +44,8 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
           def = dict[j].definition || dict[j].defintion;
       $.each(terms, function(i,term){
         var tagLeft = '<span class="jargon-buster-term" data-definition="'+def+'"  data-def-name="'+terms[0]+'">',
-            tagRight = '</span>';
+            tagRight = '</span>',
+            term = escapeRegExp(term);
         $tags.html(function() {
             var html = $(this).html(),
                 search = new RegExp('(?!<a[^>]*>)([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(' + term + ')([\.,-\/#!$%\^&\*;:{}=\-_`~() ])(?![^<]*</a>)', 'gi');
@@ -48,13 +57,9 @@ JargonBuster.prototype.findJargon = function($tags, dict) {
             }
             return html;
         });
-      })
-
-      // TODO:
-      // - If link, ignore
+      });
     }
 }
-
 
 JargonBuster.prototype.setupClicks = function(){
   $('.jargon-buster-term').click(function(){
