@@ -31,5 +31,14 @@ var buster = new JargonBuster({
 
 Change the spreadsheet key to use a different Google Sheet as a source.
 
+## Credits
+
+The "WSJ+1" team was:
+- Elliot Bentley
+- Jason French
+- Jon Sindreu
+- John Crowley
+- Pat Minczeski
+- Jack Bowie
 
 ![Spot and Data](http://i.imgur.com/tehdV.gif)
